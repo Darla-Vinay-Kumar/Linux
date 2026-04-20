@@ -1,0 +1,349 @@
+# Linux Commands Notes for DevOps
+
+This repository contains commonly used Linux commands with explanations.
+These commands are frequently used in DevOps, Cloud, and System Administration.
+
+-------------------------------------------------
+
+# 1. Basic Navigation Commands
+
+pwd
+Shows current directory path
+
+ls
+Lists files and folders
+
+ls -l
+Lists files with details (permissions, owner, size)
+
+ls -a
+Shows hidden files
+
+cd foldername
+Changes directory
+
+cd ..
+Moves one directory back
+
+cd ~
+Moves to home directory
+
+clear
+Clears terminal screen
+
+history
+Shows previously executed commands
+
+-------------------------------------------------
+
+# 2. File and Directory Management
+
+mkdir foldername
+Creates new folder
+
+mkdir dir1 dir2 dir3
+Creates multiple folders
+
+touch file.txt
+Creates new file
+
+cp file.txt file2.txt
+Copies file
+
+cp -r folder1 folder2
+Copies directory
+
+mv file.txt newfile.txt
+Renames file
+
+mv file.txt folder/
+Moves file
+
+rm file.txt
+Deletes file
+
+rm -r foldername
+Deletes folder
+
+rmdir foldername
+Deletes empty folder
+
+-------------------------------------------------
+
+# 3. Viewing File Content
+
+cat file.txt
+Displays file content
+
+less file.txt
+View large file page by page
+
+head file.txt
+Shows first 10 lines
+
+tail file.txt
+Shows last 10 lines
+
+tail -f logfile.log
+Shows live log updates
+
+-------------------------------------------------
+
+# 4. File Permissions
+
+ls -l
+Check permissions
+
+chmod 777 file.txt
+Give read write execute permission to all users
+
+chmod 755 script.sh
+Owner full permission, others read and execute
+
+chmod +x script.sh
+Make file executable
+
+Permission values:
+
+7 = read write execute
+6 = read write
+5 = read execute
+4 = read only
+
+Example:
+
+chmod 644 file.txt
+
+-------------------------------------------------
+
+# 5. Users and Groups
+
+whoami
+Shows current user
+
+who
+Shows logged in users
+
+sudo useradd username
+Creates new user
+
+sudo passwd username
+Sets password
+
+sudo userdel username
+Deletes user
+
+groups
+Shows group names
+
+id
+Shows user id and group id
+
+-------------------------------------------------
+
+# 6. Process Management
+
+ps
+Shows running processes
+
+ps -ef
+Shows detailed process list
+
+top
+Shows live running processes
+
+htop
+Better process viewer
+
+kill processID
+Stops process
+
+kill -9 processID
+Force stops process
+
+-------------------------------------------------
+
+# 7. Disk and Memory Commands
+
+df -h
+Shows disk usage
+
+du -h
+Shows folder size
+
+free -m
+Shows memory usage
+
+lsblk
+Shows disk partitions
+
+-------------------------------------------------
+
+# 8. Networking Commands
+
+ip a
+Shows IP address
+
+ping google.com
+Checks internet connection
+
+curl google.com
+Fetches webpage data
+
+wget url
+Downloads file
+
+netstat -tuln
+Shows open ports
+
+ss -tuln
+Shows listening ports
+
+-------------------------------------------------
+
+# 9. Search Commands
+
+grep word file.txt
+Search word in file
+
+grep -i word file.txt
+Ignore case sensitive search
+
+grep -r word .
+Search word in all files
+
+find . -name filename
+Find file
+
+find . -type d -name foldername
+Find directory
+
+-------------------------------------------------
+
+# 10. Package Installation
+
+Ubuntu / Debian:
+
+sudo apt update
+sudo apt install nginx
+
+RedHat / CentOS:
+
+sudo yum install nginx
+
+Check installed packages:
+
+rpm -qa
+
+-------------------------------------------------
+
+# 11. Archive and Compression
+
+zip file.zip file.txt
+Create zip file
+
+unzip file.zip
+Extract zip
+
+tar -cvf file.tar folder
+Create tar file
+
+tar -xvf file.tar
+Extract tar file
+
+tar -czvf file.tar.gz folder
+Create compressed file
+
+-------------------------------------------------
+
+# 12. System Information Commands
+
+uname -a
+Shows system info
+
+uptime
+Shows system running time
+
+date
+Shows current date
+
+cal
+Shows calendar
+
+hostname
+Shows system name
+
+-------------------------------------------------
+
+# 13. Important Linux Directories
+
+/home
+User files
+
+/etc
+Configuration files
+
+/var
+Logs
+
+/tmp
+Temporary files
+
+/bin
+System commands
+
+/opt
+Optional software
+
+/usr
+User programs
+
+-------------------------------------------------
+
+# 14. Useful DevOps Commands
+
+check disk space
+df -h
+
+check memory
+free -m
+
+check cpu
+top
+
+check logs
+tail -f /var/log/messages
+
+check open ports
+ss -tuln
+
+-------------------------------------------------
+
+# 15. Practice Tasks
+
+Create folders
+
+mkdir devops
+cd devops
+mkdir linux terraform ansible
+
+Create files
+
+touch notes.txt
+touch commands.txt
+
+Add text
+
+echo hello >> notes.txt
+
+Search text
+
+grep hello notes.txt
+
+-------------------------------------------------
+
+Author
+
+Vinay Kumar
+
+DevOps Learning Linux Commands
